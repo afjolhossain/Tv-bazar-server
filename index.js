@@ -4,7 +4,7 @@ const cors = require("cors");
 const { MongoClient, ServerApiVersion, ObjectId } = require("mongodb");
 const app = express();
 
-const port = process.env.POST || 5000;
+const port = process.env.PORT || 5000;
 
 // afjolhossain020
 // bv5mUzBEfsgTEZZU
