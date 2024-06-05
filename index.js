@@ -14,8 +14,7 @@ const port = process.env.POST || 5000;
 app.use(cors());
 app.use(express.json());
 
-const uri = `mongodb+srv://${process.env.DB_USER}:${process.env.DB_PASS}@cluster0.kw08h9s.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0`;
-const client = new MongoClient(uri, {
+const client = new MongoClient(process.env.DATABASE_URL, {
   serverApi: {
     version: ServerApiVersion.v1,
     strict: true,
