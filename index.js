@@ -111,7 +111,7 @@ async function run() {
       await userCollection.insertOne(user);
       return res.send();
     });
-
+    // server is working
     app.get("/user/:email", async (req, res) => {
       const email = req.params.email;
       const result = await userCollection.findOne({ email });
